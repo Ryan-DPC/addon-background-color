@@ -33,4 +33,4 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: pack-zip-output
-            path: ./.output/extension/*.zip
+            path: ./
