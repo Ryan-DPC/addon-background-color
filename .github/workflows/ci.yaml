@@ -21,7 +21,7 @@ jobs:
             - name: Test Lint Code
               run: npm run lint:check
             - name: Lint Code
-              run: npm lint:fix
+              run: npm run lint:fix
             - name: Package app
               run: npm run zip
             - name: Upload ZIP (pack:zip)
