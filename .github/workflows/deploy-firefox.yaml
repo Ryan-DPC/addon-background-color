@@ -35,8 +35,8 @@ jobs:
           with:
             node-version: 20
         - name: Install dependencies
-          run: npm i && npm install webex --save -dev
-        - name: Sign with webex
+          run: npm i
+        - name: Sign with web-ext
           run: |
             npx web-ext sign \
               --api-key ${{ secrets.AMO_JWT_ISSUER }} \
