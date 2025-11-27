@@ -21,11 +21,11 @@ jobs:
             - name: Test Lint Code
               run: npm run lint:check
             - name: Lint Code
-              run: npm run lint:fix
+              run: npm lint:fix
             - name: Package app
               run: npm run zip
             - name: Upload ZIP (pack:zip)
               uses: actions/upload-artifact@v4
               with:
                 name: pack-zip-output
-                path: ./dist/*.zip
+                path: ./*.zip
