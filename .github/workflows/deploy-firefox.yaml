@@ -20,14 +20,14 @@ jobs:
         - name: Install dependencies
           run: npm i
         - name: Package app (pack:zip)
-          run: npm run pack:zip
+          run: npm run build:firefox
         - name: Sign with web-ext
           run: |
             npx web-ext sign \
               --api-key ${{ secrets.AMO_JWT_ISSUER }} \
               --api-secret ${{ secrets.AMO_JWT_SECRET }} \
               --channel unlisted \
-              --source-dir ./build \
+              --source-dir ./.output/firefox-mv2 \
               --artifacts-dir ./signed
         - name: Upload ZIP (pack:zip)
           uses: actions/upload-artifact@v4
