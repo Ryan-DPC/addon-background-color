@@ -19,9 +19,9 @@ jobs:
             - name: Install dependencies
               run: npm i
             - name: Test Lint Code
-              run: npm lint:check
+              run: npm run lint:check
             - name: Lint Code
-              run: npm lint:fix
+              run: npm run lint:fix
             - name: Package app
               run: npm run zip
     build_pack:
@@ -35,7 +35,7 @@ jobs:
           with:
             node-version: 20
         - name: Install dependencies
-          run: npm install
+          run: npm i
         - name: Package app (pack:zip)
           run: npm run pack:zip
         - name: Upload ZIP (pack:zip)
