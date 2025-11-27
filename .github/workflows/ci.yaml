@@ -18,6 +18,8 @@ jobs:
                 node-version: 24
             - name: Install dependencies
               run: npm i
+            - name: Install web-ex
+              run: npm i web-ex --save -dev
             - name: Test Lint Code
               run: npm run lint:check
             - name: Lint Code
